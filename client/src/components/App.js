@@ -31,6 +31,7 @@ class App extends Component {
     this.logout = this.logout.bind(this)
     this.liftRestaurantToState = this.liftRestaurantToState.bind(this)
     this.addToCart = this.addToCart.bind(this)
+    this.removeFromCart = this.removeFromCart.bind(this)
   }
 
   liftTokenToState(data) {
@@ -57,7 +58,7 @@ class App extends Component {
     }, console.log(this.state.cartItems))
   }
 
-  RemoveFromCart(item) {
+  removeFromCart(item) {
     console.log(`Removing ${item.name} from Cart`)
     var copyCart = Array.from(this.state.cartItems)
     var index = copyCart.indexOf(item)

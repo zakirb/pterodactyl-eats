@@ -4,7 +4,7 @@ import React from 'react';
 const restItem = props => {
 
   return (
-    <div>
+    <div onClick={this.props.liftRestaurantToState}>
       <div>
         <img src={props.restaurant.imageUrl} />
       </div>

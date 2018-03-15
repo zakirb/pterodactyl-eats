@@ -7,7 +7,7 @@ class Results extends Component {
   }
 
   const allRestaurants = restaurantData.map( (restaurant) => {
-    return <restItem restaurant={restaurant}/>
+    return <restItem restaurant={restaurant} liftRestaurantToState={this.props.liftRestaurantToState(restaurant)}/>
   })
 
 

@@ -6,7 +6,7 @@ class Restaurant extends Component {
   }
 
   const menuItems = this.props.restaurant.menuItems.map( (item) => {
-    return <menuItem item={item} />
+    return <menuItem item={item} addToCart={this.props.addToCart(item)}/>
   })
 
 

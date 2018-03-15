@@ -9,16 +9,19 @@ const restaurantData = [
     menuItems: [
       {
         name: 'T-Rex steak',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/91JbyDplsjL._SY355_.jpg',
         description: 'Better than the T-bone, must be eaten without using arms',
         price: 18.99
       },
       {
         name: 'T-Rex steak',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/91JbyDplsjL._SY355_.jpg',
         description: 'Better than the T-bone, must be eaten without using arms',
         price: 15.99
       },
       {
         name: 'T-Rex steak',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/91JbyDplsjL._SY355_.jpg',
         description: 'Better than the T-bone, must be eaten without using arms',
         price: 12.99
       }
@@ -32,16 +35,19 @@ const restaurantData = [
     menuItems: [
       {
         name: 'Dino eggs',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/91JbyDplsjL._SY355_.jpg',
         description: 'Really big eggs',
         price: 10.99
       },
       {
         name: 'pterodactyl',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/91JbyDplsjL._SY355_.jpg',
         description: 'Better than the T-bone, must be eaten without using arms',
         price: 15.99
       },
       {
         name: 'Velociraptor',
+        imageUrl: 'https://www.everythingdinosaur.com/wp-content/uploads/2012/11/Papo_Brachiosaurus_dinosaur_model.jpg',
         description: 'Really fast and vicious',
         price: 16.99
       }
@@ -55,16 +61,19 @@ const restaurantData = [
     menuItems: [
       {
         name: 'T-Rex steak',
+        imageUrl: 'https://www.everythingdinosaur.com/wp-content/uploads/2012/11/Papo_Brachiosaurus_dinosaur_model.jpg',
         description: 'Better than the T-bone, must be eaten without using arms',
         price: 146.99
       },
       {
         name: ' steak',
+        imageUrl: 'https://www.everythingdinosaur.com/wp-content/uploads/2012/11/Papo_Brachiosaurus_dinosaur_model.jpg',
         description: 'Better than the T-bone, must be eaten without using arms',
         price: 15.99
       },
       {
         name: 'T-Rex',
+        imageUrl: 'https://www.everythingdinosaur.com/wp-content/uploads/2012/11/Papo_Brachiosaurus_dinosaur_model.jpg',
         description: 'Better than the T-bone, must be eaten without using arms',
         price: 1.99
       }

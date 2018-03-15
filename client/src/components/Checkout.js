@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Checkout extends Component {
-  constructor(props){
-    super(props)
-  }
+const Checkout = props => {
 
-  render() {
-    console.log(this.props.cartItems)
-    const cartItems = this.props.cartItems.map( (food, index) => (
-      <li key={index}>{food.name}</li>
+    console.log(props.cartItems)
+    var cartItems = props.cartItems.map( (item, index) => (
+      <li key={index}>{item.name}</li>
     ))
 
     return (
@@ -20,7 +16,6 @@ class Checkout extends Component {
         </ul>
       </div>
     )
-  }
 }
 
 export default Checkout

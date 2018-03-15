@@ -9,7 +9,7 @@ import Home from './Home';
 import Results from './Results';
 import Restaurant from './Restaurant';
 import Checkout from './Checkout';
-import Tracking from './Tracking';
+import { Tracking}  from './Tracking';
 import Login from './Login';
 import Signup from './Signup';
 import { Footer } from './Footer';
@@ -115,8 +115,8 @@ class App extends Component {
               liftToken={this.liftTokenToState}
               liftCurrentPage={this.liftCurrentPageToState}
             />
-            <Cart items={this.state.cartItems} removeFromCart={this.removeFromCart}/>
             <Search liftCurrentPage={this.liftCurrentPageToState} />
+            <Cart items={this.state.cartItems} removeFromCart={this.removeFromCart}/>
             <div>
               <Route exact path='/' component={Home} />
               <Route path='/results' component={ () => (

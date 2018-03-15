@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Tracking extends Component {
-  constructor(props){
-    super(props)
-  }
+export const Tracking = props => {
 
-  render() {
-    return (
-      <h1>........TRACKING.......</h1>
-    )
-  }
+  return (
+    <h1>........TRACKING.......</h1>
+    
+  )
 }
 
 export default Tracking

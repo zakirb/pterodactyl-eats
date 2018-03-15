@@ -11,6 +11,7 @@ import Checkout from './Checkout';
 import Tracking from './Tracking';
 import Login from './Login';
 import Signup from './Signup';
+import { Footer } from './Footer';
 
 class App extends Component {
   constructor(props){
@@ -66,18 +67,23 @@ class App extends Component {
       <div>
         <Router>
           <div>
-            <Nav />
+            <Nav user={this.state.user} logout={this.logout} liftToken={this.liftTokenToState} />
             <div>
               <Route exact path='/' component={Home} />
               <Route path='/results' component={Results} />
               <Route path='/restaurant' component={Restaurant} />
               <Route path='/checkout' component={Checkout} />
               <Route path='/tracking' component={Tracking} />
-              <Route path='/login' component={Login} />
-              <Route path='/signup' component={Signup} />
+              <Route path='/login' component={() => (
+                <Login liftToken={this.liftTokenToState} />
+              )} />
+              <Route path='/signup' component={() => (
+                <Login liftToken={this.liftTokenToState} />
+              )} />
             </div>
           </div>
         </Router>
+        <Footer />
       </div>
     )
   }

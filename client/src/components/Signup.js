@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class Signup extends Component {
@@ -49,7 +50,9 @@ class Signup extends Component {
         <br />
         Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
         <br />
-        <input type='submit' value='Sign Up!' />
+        <Link to={this.props.currentPage}>
+          <input type='submit' value='Sign Up!' />
+        </Link>
       </form>
     )
   }

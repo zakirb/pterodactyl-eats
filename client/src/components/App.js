@@ -4,6 +4,7 @@ import '../App.css';
 import { UserProfile } from './UserProfile';
 import axios from 'axios'
 import Nav from './Nav';
+import { Search } from './Search';
 import Home from './Home';
 import Results from './Results';
 import Restaurant from './Restaurant';
@@ -25,6 +26,7 @@ class App extends Component {
       completedOrder: []
     }
     this.liftTokenToState = this.liftTokenToState.bind(this)
+    this.liftCurrentPageToState = this.liftCurrentPageToState.bind(this)
     this.logout = this.logout.bind(this)
   }
 
@@ -32,6 +34,12 @@ class App extends Component {
     this.setState({
       token: data.token,
       user: data.user
+    })
+  }
+
+  liftCurrentPageToState(page) {
+    this.setState({
+      currentPage: page
     })
   }
 
@@ -65,9 +73,16 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h1>~~~~~~~State.currentPage: {this.state.currentPage}~~~~~~~~~~~~</h1>
         <Router>
           <div>
-            <Nav user={this.state.user} logout={this.logout} liftToken={this.liftTokenToState} />
+            <Nav
+              user={this.state.user}
+              logout={this.logout}
+              liftToken={this.liftTokenToState}
+              liftCurrentPage={this.liftCurrentPageToState}
+            />
+            <Search liftCurrentPage={this.liftCurrentPageToState} />
             <div>
               <Route exact path='/' component={Home} />
               <Route path='/results' component={Results} />
@@ -75,10 +90,10 @@ class App extends Component {
               <Route path='/checkout' component={Checkout} />
               <Route path='/tracking' component={Tracking} />
               <Route path='/login' component={() => (
-                <Login liftToken={this.liftTokenToState} />
+                <Login currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
               )} />
               <Route path='/signup' component={() => (
-                <Login liftToken={this.liftTokenToState} />
+                <Signup currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
               )} />
             </div>
           </div>

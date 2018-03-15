@@ -6,16 +6,16 @@ class Results extends Component {
     super(props)
   }
 
-  const allRestaurants = restaurantData.map( (restaurant) => {
-    return <restItem restaurant={restaurant} liftRestaurantToState={this.props.liftRestaurantToState(restaurant)}/>
-  })
+  // const allRestaurants = restaurantData.map( (restaurant) => {
+  //   return <restItem restaurant={restaurant} liftRestaurantToState={this.props.liftRestaurantToState(restaurant)}/>
+  // })
 
 
   render() {
     return (
       <div>
         <h1>........RESULTS.......</h1>
-        {allRestaurants}
+        {/* {allRestaurants} */}
       </div>
 
     )

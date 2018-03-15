@@ -12,7 +12,7 @@ class Nav extends Component {
 
   handleClick() {
     this.props.logout()
-    this.props.liftCurrentPage('home')
+    this.props.liftCurrentPage('/')
   }
 
   render() {

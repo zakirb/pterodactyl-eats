@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 class Login extends Component {
@@ -35,19 +35,22 @@ class Login extends Component {
   }
 
   render() {
-    return(
-      <form onSubmit={this.handleSubmit}>
-        Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
-        <br />
-        Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
-        <br />
-        <Link to={this.props.currentPage}>
+    if ( Object.keys(this.props.user).length > 0 ) {
+      console.log("We are about to redirect...")
+      console.log(this.props.currentPage)
+      return (<Redirect to={{ pathname: this.props.currentPage }} />)
+    } else {
+      return(
+        <form onSubmit={this.handleSubmit}>
+          Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
+          <br />
+          Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
+          <br />
           <input type='submit' value='Log In!' />
-        </Link>
-      </form>
-    )
+        </form>
+      )
+    }
   }
-
 }
 
 export default Login;

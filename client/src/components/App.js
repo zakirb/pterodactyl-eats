@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
-import './App.css';
-import Signup from './Signup';
-import Login from './Login';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import '../App.css';
 import { UserProfile } from './UserProfile';
 import axios from 'axios'
+import Nav from './Nav';
+import Home from './Home';
+import Results from './Results';
+import Restaurant from './Restaurant';
+import Checkout from './Checkout';
+import Tracking from './Tracking';
+import Login from './Login';
+import Signup from './Signup';
+import { Footer } from './Footer';
 
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {
       token: '',
-      user: {}
+      user: {},
+      currentPage: '',
+      currentRestaurant: null,
+      cartItems: [],
+      completedOrder: []
     }
     this.liftTokenToState = this.liftTokenToState.bind(this)
     this.logout = this.logout.bind(this)
@@ -51,22 +63,57 @@ class App extends Component {
   }
 
   render() {
-    let theUser = this.state.user
-    if (typeof theUser === 'object' && Object.keys(theUser).length > 0) {
-      return (
-        <div>
-          <UserProfile user={theUser} logout={this.logout} />
-        </div>
-      )
-    } else {
-      return (
-        <div className="App">
-          <Signup liftToken={this.liftTokenToState} />
-          <Login liftToken={this.liftTokenToState} />
-        </div>
-      )
-    }
+    return (
+      <div>
+        <Router>
+          <div>
+            <Nav user={this.state.user} logout={this.logout} liftToken={this.liftTokenToState} />
+            <div>
+              <Route exact path='/' component={Home} />
+              <Route path='/results' component={Results} />
+              <Route path='/restaurant' component={Restaurant} />
+              <Route path='/checkout' component={Checkout} />
+              <Route path='/tracking' component={Tracking} />
+              <Route path='/login' component={() => (
+                <Login liftToken={this.liftTokenToState} />
+              )} />
+              <Route path='/signup' component={() => (
+                <Login liftToken={this.liftTokenToState} />
+              )} />
+            </div>
+          </div>
+        </Router>
+        <Footer />
+      </div>
+    )
   }
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

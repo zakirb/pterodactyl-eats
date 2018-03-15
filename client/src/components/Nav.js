@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Home from './Home';
 import Results from './Results';
 import Restaurant from './Restaurant';
@@ -10,29 +10,31 @@ import Signup from './Signup';
 
 class Nav extends Component {
   render() {
-    return(
-      <Router>
-        <div>
-          <nav>
-            <Link to='/'>Home</Link>
-            <Link to='/results'>Results</Link>
-            <Link to='/restaurant'>Restaurant</Link>
-            <Link to='/checkout'>Checkout</Link>
-            <Link to='/tracking'>Tracking</Link>
-            <Link to='/login'>Log In</Link>
-            <Link to='/signup'>Sign Up</Link>
-            <Link to='/'>Logout</Link>
-          </nav>
-          <Route exact path='/' component={Home} />
-          <Route path='/results' component={Results} />
-          <Route path='/restaurant' component={Restaurant} />
-          <Route path='/checkout' component={Checkout} />
-          <Route path='/tracking' component={Tracking} />
-          <Route path='/login' component={Login} />
-          <Route path='/signup' component={Signup} />
-        </div>
-      </Router>
-    )
+    let theUser = this.props.user
+    if (typeof theUser === 'object' && Object.keys(theUser).length > 0) {
+      return (
+        // links if logged in
+        <nav>
+          <Link to='/'>Home</Link>
+          <Link to='/results'>Results</Link>
+          <Link to='/restaurant'>Restaurant</Link>
+          <Link to='/checkout'>Checkout</Link>
+          <Link to='/tracking'>Tracking</Link>
+          <Link to='/' onClick={this.props.logout}>Logout</Link>
+        </nav>
+      )
+    } else {
+      return (
+        // links if not logged in....
+        <nav>
+          <Link to='/'>Home</Link>
+          <Link to='/results'>Results</Link>
+          <Link to='/restaurant'>Restaurant</Link>
+          <Link to='/login'>Log In</Link>
+          <Link to='/signup'>Sign Up</Link>
+        </nav>
+      )
+    }
   }
 }
 

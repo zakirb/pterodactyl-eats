@@ -28,6 +28,8 @@ class App extends Component {
     this.liftTokenToState = this.liftTokenToState.bind(this)
     this.liftCurrentPageToState = this.liftCurrentPageToState.bind(this)
     this.logout = this.logout.bind(this)
+    this.liftRestaurantToState = this.liftRestaurantToState.bind(this)
+    this.addToCart = this.addToCart.bind(this)
   }
 
   liftTokenToState(data) {
@@ -36,6 +38,25 @@ class App extends Component {
       user: data.user
     })
   }
+
+
+  liftRestaurantToState(restaurant) {
+    console.log(`Setting current restaurant to ${restaurant.name}`)
+    this.setState({
+      currentRestaurant: restaurant
+    })
+  }
+
+  addToCart(item) {
+    console.log(`ADDING ${item.name} to Cart`)
+    var copyCart = Array.from(this.state.cartItems)
+    copyCart.push(item)
+    this.setState({
+      cartItems: copyCart
+    }, console.log(this.state.cartItems))
+
+  }
+
 
   liftCurrentPageToState(page) {
     this.setState({
@@ -85,8 +106,12 @@ class App extends Component {
             <Search liftCurrentPage={this.liftCurrentPageToState} />
             <div>
               <Route exact path='/' component={Home} />
-              <Route path='/results' component={Results} />
-              <Route path='/restaurant' component={Restaurant} />
+              <Route path='/results' component={ () => (
+                <Results liftRestaurantToState={this.liftRestaurantToState} />
+              )} />
+              <Route path='/restaurant' component={ () => (
+                <Restaurant restaurant={this.state.currentRestaurant} addToCart={this.addToCart} />
+              )} />
               <Route path='/checkout' component={Checkout} />
               <Route path='/tracking' component={Tracking} />
               <Route path='/login' component={() => (

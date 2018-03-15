@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 class Signup extends Component {
@@ -38,25 +38,26 @@ class Signup extends Component {
       console.log(result.data) // result is result from back end responding to post request and .data is where axios stores the returned data
       localStorage.setItem('mernToken', result.data.token) // change 'mernToken' to your app name or something useful
       this.props.liftToken(result.data)
-    })
+    }).catch( err => console.log(err) )
   }
 
   render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        Name: <input type='text' value={this.state.name} onChange={this.handleNameChange} />
-        <br />
-        Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
-        <br />
-        Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
-        <br />
-        <Link to={this.props.currentPage} onClick={this.handleSubmit}>
+    if ( Object.keys(this.props.user).length > 0 ) {
+      return (<Redirect to={{ pathname: this.props.currentPage }} />)
+    } else {
+      return (
+        <form onSubmit={this.handleSubmit}>
+          Name: <input type='text' value={this.state.name} onChange={this.handleNameChange} />
+          <br />
+          Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
+          <br />
+          Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
+          <br />
           <input type='submit' value='Sign Up!' />
-        </Link>
-      </form>
-    )
+        </form>
+      )
+    }
   }
-
 }
 
 export default Signup;

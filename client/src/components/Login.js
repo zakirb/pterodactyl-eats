@@ -36,8 +36,6 @@ class Login extends Component {
 
   render() {
     if ( Object.keys(this.props.user).length > 0 ) {
-      console.log("We are about to redirect...")
-      console.log(this.props.currentPage)
       return (<Redirect to={{ pathname: this.props.currentPage }} />)
     } else {
       return(

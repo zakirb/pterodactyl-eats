@@ -13,6 +13,7 @@ import Tracking from './Tracking';
 import Login from './Login';
 import Signup from './Signup';
 import { Footer } from './Footer';
+import Cart from './Cart';
 
 class App extends Component {
   constructor(props){
@@ -54,7 +55,16 @@ class App extends Component {
     this.setState({
       cartItems: copyCart
     }, console.log(this.state.cartItems))
+  }
 
+  RemoveFromCart(item) {
+    console.log(`Removing ${item.name} from Cart`)
+    var copyCart = Array.from(this.state.cartItems)
+    var index = copyCart.indexOf(item)
+    copyCart.splice(index, 1)
+    this.setState({
+      cartItems: copyCart
+    }, console.log(this.state.cartItems))
   }
 
 
@@ -103,6 +113,7 @@ class App extends Component {
               liftToken={this.liftTokenToState}
               liftCurrentPage={this.liftCurrentPageToState}
             />
+            <Cart items={this.state.cartItems} removeFromCart={this.removeFromCart}/>
             <Search liftCurrentPage={this.liftCurrentPageToState} />
             <div>
               <Route exact path='/' component={Home} />

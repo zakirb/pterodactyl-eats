@@ -50,7 +50,7 @@ class Signup extends Component {
         <br />
         Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
         <br />
-        <Link to={this.props.currentPage}>
+        <Link to={this.props.currentPage} onClick={this.handleSubmit}>
           <input type='submit' value='Sign Up!' />
         </Link>
       </form>

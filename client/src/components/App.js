@@ -20,7 +20,7 @@ class App extends Component {
     this.state = {
       token: '',
       user: {},
-      currentPage: '',
+      currentPage: '/',
       currentRestaurant: null,
       cartItems: [],
       completedOrder: []
@@ -43,7 +43,8 @@ class App extends Component {
   liftRestaurantToState(restaurant) {
     console.log(`Setting current restaurant to ${restaurant.name}`)
     this.setState({
-      currentRestaurant: restaurant
+      currentRestaurant: restaurant,
+      currentPage: '/restaurant'
     })
   }
 
@@ -112,13 +113,15 @@ class App extends Component {
               <Route path='/restaurant' component={ () => (
                 <Restaurant restaurant={this.state.currentRestaurant} addToCart={this.addToCart} />
               )} />
-              <Route path='/checkout' component={Checkout} />
+              <Route path='/checkout' component={ () => (
+                <Checkout cartItems={this.state.cartItems} />
+              )} />
               <Route path='/tracking' component={Tracking} />
               <Route path='/login' component={() => (
-                <Login currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
+                <Login user={this.state.user} currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
               )} />
               <Route path='/signup' component={() => (
-                <Signup currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
+                <Signup user={this.state.user} currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
               )} />
             </div>
           </div>

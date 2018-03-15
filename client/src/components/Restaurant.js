@@ -23,7 +23,7 @@ class Restaurant extends Component {
             <h6>{this.props.restaurant.address}</h6>
             <img src={this.props.restaurant.imageUrl} />
             <p>{this.props.restaurant.description}</p>
-            {/* {menuItems} */}
+            {menuItems}
           </div>
       </div>
 

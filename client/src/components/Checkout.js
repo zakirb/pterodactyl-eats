@@ -6,8 +6,19 @@ class Checkout extends Component {
   }
 
   render() {
+    console.log(this.props.cartItems)
+    const cartItems = this.props.cartItems.map( (food, index) => (
+      <li key={index}>{food.name}</li>
+    ))
+
     return (
-      <h1>........CHECKOUT.......</h1>
+      <div>
+        <h1>........CHECKOUT.......</h1>
+        <h2>Your Order</h2>
+        <ul>
+          {cartItems}
+        </ul>
+      </div>
     )
   }
 }

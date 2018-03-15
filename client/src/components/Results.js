@@ -19,7 +19,7 @@ class Results extends Component {
     return (
       <div>
         <h1>........RESULTS.......</h1>
-        {/* {allRestaurants} */}
+        {allRestaurants}
       </div>
 
     )

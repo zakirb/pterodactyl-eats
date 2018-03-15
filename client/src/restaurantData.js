@@ -83,7 +83,7 @@ const restaurantData = [
 
 
 
-export default restaurantData
+export default restaurantData;
 
 // {
 //   name: '',

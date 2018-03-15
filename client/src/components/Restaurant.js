@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
+import MenuItem from './MenuItem';
 
 class Restaurant extends Component {
   constructor(props){
     super(props)
   }
 
-  const menuItems = this.props.restaurant.menuItems.map( (item) => {
-    return <menuItem item={item} addToCart={this.props.addToCart(item)}/>
-  })
+
 
 
   render() {
+
+    const menuItems = this.props.restaurant.menuItems.map( (item, index) => {
+      return <MenuItem item={item} addToCart={ () => this.props.addToCart(item)} key={index}/>
+    })
+
     return (
       <div>
         <h1>........RESTAURANT.......</h1>

@@ -5,9 +5,9 @@ class Restaurant extends Component {
     super(props)
   }
 
-  const menuItems = this.props.restaurant.menuItems.map( (item) => {
-    return <menuItem item={item} addToCart={this.props.addToCart(item)}/>
-  })
+  // const menuItems = this.props.restaurant.menuItems.map( (item) => {
+  //   return <menuItem item={item} addToCart={this.props.addToCart(item)}/>
+  // })
 
 
   render() {
@@ -19,7 +19,7 @@ class Restaurant extends Component {
             <h6>{this.props.restaurant.address}</h6>
             <img src={this.props.restaurant.imageUrl} />
             <p>{this.props.restaurant.description}</p>
-            {menuItems}
+            {/* {menuItems} */}
           </div>
       </div>
 

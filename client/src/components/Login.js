@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class Login extends Component {
@@ -40,7 +41,9 @@ class Login extends Component {
         <br />
         Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
         <br />
-        <input type='submit' value='Log In!' />
+        <Link to={this.props.currentPage}>
+          <input type='submit' value='Log In!' />
+        </Link>
       </form>
     )
   }

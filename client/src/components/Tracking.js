@@ -4,7 +4,7 @@ export const Tracking = props => {
 
   return (
     <h1>........TRACKING.......</h1>
-    
+
   )
 }
 

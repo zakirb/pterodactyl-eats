@@ -4,7 +4,7 @@ const CartItem = props => {
   return (
     <div>
       <div>
-        <img src="https://thumbs-prod.si-cdn.com/yENUwQCHoFsTXnJqoqYf63Kg_aI=/800x600/filters:no_upscale()/https://public-media.smithsonianmag.com/filer/c5/bb/c5bb28e9-efd8-45b7-8e9c-118d890bfe81/patagotitan.jpg" />
+        <img src={props.item.imageUrl} />
       </div>
       <div>
         <h2>{props.item.name}kkk</h2>

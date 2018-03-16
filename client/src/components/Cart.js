@@ -1,5 +1,6 @@
 import React from 'react';
 import CartItem from './CartItem';
+import {Link} from 'react-router-dom';
 
 const Cart = props => {
 
@@ -14,7 +15,8 @@ const Cart = props => {
   return (
     <div>
       {allItems}
-      <p>Total: {total}</p>
+      <p>Total: ${total}</p>
+      <Link to='/checkout'><button>Checkout</button></Link>
     </div>
   )
 

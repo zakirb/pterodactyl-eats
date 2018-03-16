@@ -126,7 +126,7 @@ class App extends Component {
                 <Restaurant restaurant={this.state.currentRestaurant} addToCart={this.addToCart} />
               )} />
               <Route path='/checkout' component={ () => (
-                <Checkout cartItems={this.state.cartItems} />
+                <Checkout cartItems={this.state.cartItems} removeFromCart={this.removeFromCart}/>
               )} />
               <Route path='/tracking' component={Tracking} />
               <Route path='/login' component={() => (

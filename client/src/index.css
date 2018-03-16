@@ -9,7 +9,7 @@ body {
   font-family: sans-serif;
 }
 
-.body-img {
+.body-img1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -21,7 +21,7 @@ body {
 }
 
 .img-grad {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;

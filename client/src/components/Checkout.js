@@ -1,6 +1,6 @@
 import React from 'react';
-import '../creditcard.css';
-import '../ccformstyling.css';
+// import '../css/creditcard.css';
+import '../css/Checkout.css';
 import {Link} from 'react-router-dom';
 
 const Checkout = props => {

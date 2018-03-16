@@ -1,0 +1,23 @@
+.rest-item {
+  position: relative;
+}
+
+.rest-item-backing {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 95vw;
+  background-color: #192628;
+  opacity: .3;
+  z-index: -10;
+}
+
+.rest-h1 {
+  position: relative;
+  left: 30vw;
+}
+
+.rest-h6 {
+  position: relative;
+  left: 40vw;
+}

@@ -6,7 +6,7 @@ const RestItem = props => {
 
   return (
     <Link to='/restaurant'>
-      <div className="rest-item-container" onClick={props.liftRestaurantToState}>
+      <div className="rest-item-container rest-item" onClick={props.liftRestaurantToState}>
         <div className="rest-info">
           <img className='rest-info' src={props.restaurant.imageUrl} />
         </div>
@@ -15,6 +15,7 @@ const RestItem = props => {
           <h6>{props.restaurant.address}</h6>
           <p>{props.restaurant.description}</p>
         </div>
+        <div class='rest-item-backing'></div>
       </div>
     </Link>
   )

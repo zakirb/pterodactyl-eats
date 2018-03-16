@@ -35,18 +35,18 @@ class Cart extends Component {
           <div id='cart'>
             {allItems}
             <p>Total: ${total}</p>
-            <Link to='/checkout'><button>Checkout</button></Link>
+            <Link to='/checkout'><button id='cart-checkout'>Checkout</button></Link>
           </div>
         </div>
       )
     } else {
       return (
         <div>
-          <button onClick={() => this.slideCart()} id='cart-button'>|||</button>
+          <button onClick={() => this.slideCart()} id='cart-button'><i class="fas fa-shopping-cart"></i></button>
           <div id='cart'>
             {allItems}
             <p>Total: ${total}</p>
-            <Link to='/login'><button>Checkout</button></Link>
+            <Link to='/login'><button id='cart-checkout'>Checkout</button></Link>
           </div>
         </div>
       )

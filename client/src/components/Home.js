@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import image from '../images/pterodactyl-img-1.png';
+import '../css/cart.css';
 
 class Home extends Component {
   constructor(props){

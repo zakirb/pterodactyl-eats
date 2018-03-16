@@ -4,21 +4,37 @@ nav {
   left: -10vw;
   width: 10vw;
   transition: transform .5s;
-  background-color: #593010;
+  background-color: #294345;
 }
 
 nav a {
-  color: #d9fef6;
+  color: papayawhip;
   text-decoration: none;
 }
 
+li {
+  position: relative;
+  left: -1vw;
+  margin: 1vw;
+  list-style: none;
+}
+
 #nav-button {
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: .3vw;
-  font-size: 1.2em;
+  font-size: 2em;
   transform: rotate(90deg);
   transition: transform .5s;
+  background-color: papayawhip;
+  color: #294345;
+  outline: none;
+  z-index: 100;
+  cursor: pointer;
 }
 
 .slide-right {
   transform: translate(10vw, 0) !important;
+  box-shadow: .5vw 1vh 1.2vw .1vw rgba(0,0,0,.5);
 }

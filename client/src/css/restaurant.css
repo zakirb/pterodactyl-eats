@@ -1,6 +1,7 @@
 .rest-wrqp {
-  position: relative;
-  /* margin-top: 15vw; */
+  /* position: relative; */
+  height: 80%;
+  width: 100%;
 }
 
 .rest-item {

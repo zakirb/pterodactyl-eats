@@ -132,11 +132,7 @@ class App extends Component {
                   <Search liftCurrentPage={this.liftCurrentPageToState} />
                 </Col>
               </Row>
-              {/* <Row end='xs'>
-                <Col xs={6}> */}
                   <Cart user={this.state.user} items={this.state.cartItems} removeFromCart={this.removeFromCart}/>
-                {/* </Col>
-              </Row> */}
               <div>
                 <Route exact path='/' component={Home} />
                 <Route path='/results' component={ () => (

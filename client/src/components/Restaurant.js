@@ -27,7 +27,6 @@ class Restaurant extends Component {
         </div>
         <div className='rest-item-backing'></div>
       </div>
-
     )
   }
 }

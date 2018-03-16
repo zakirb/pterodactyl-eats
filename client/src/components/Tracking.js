@@ -4,8 +4,9 @@ import '../css/Tracking.css';
 export const Tracking = props => {
 
   return (
+    
     <div>
-      <h1>........TRACKING.......</h1>
+      <h1>Track your order</h1>
       <div id='map-container'>
         <img src="/images/pangea.jpg" id='pangea' />
         <div id='bird-container'>

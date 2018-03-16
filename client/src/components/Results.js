@@ -18,7 +18,7 @@ class Results extends Component {
 
     return (
       <div>
-        <h1>........RESULTS.......</h1>
+        <h1>Restaurants</h1>
         {allRestaurants}
       </div>
 

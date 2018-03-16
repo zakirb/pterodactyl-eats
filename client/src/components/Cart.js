@@ -34,7 +34,7 @@ class Cart extends Component {
           <button onClick={() => this.slideCart()} id='cart-button'><i class="fas fa-shopping-cart"></i></button>
           <div id='cart'>
             {allItems}
-            <p>Total: ${total}</p>
+            <p>Total: {total.toFixed(2)} PUC</p>
             <Link to='/checkout'><button id='cart-checkout'>Checkout</button></Link>
           </div>
         </div>
@@ -45,7 +45,7 @@ class Cart extends Component {
           <button onClick={() => this.slideCart()} id='cart-button'><i class="fas fa-shopping-cart"></i></button>
           <div id='cart'>
             {allItems}
-            <p>Total: ${total}</p>
+            <p>Total: {total.toFixed(2)} PUC</p>
             <Link to='/login'><button id='cart-checkout'>Checkout</button></Link>
           </div>
         </div>

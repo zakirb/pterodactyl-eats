@@ -9,7 +9,7 @@ const CartItem = props => {
       </div>
       <div className='cart-info'>
         <h2>{props.item.name}</h2>
-        <h6>{props.item.price}</h6>
+        <h6>{props.item.price} PUC</h6>
         <p>{props.item.description}</p>
         <button class='cart-item-remove' onClick={props.removeFromCart}>Remove From Cart</button>
       </div>

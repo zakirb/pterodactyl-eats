@@ -1,0 +1,16 @@
+.home-img-wrap {
+  position: relative;
+  left: 50vw;
+}
+
+.ptero-img {
+  position: relative;
+  transform: rotateY(180deg);
+}
+
+/* .meat {
+  position: relative;
+  top: 8vw;
+  left: -42vw;
+  width: 25%;
+} */

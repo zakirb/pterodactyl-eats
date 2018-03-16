@@ -17,7 +17,7 @@ class Restaurant extends Component {
         <div className='rest-item-container'>
           <div className='rest-info'>
             <h1>{this.props.restaurant.name}</h1>
-            <h6>{this.props.restaurant.address}</h6>
+            <h4>{this.props.restaurant.address}</h4>
             <p>{this.props.restaurant.description}</p>
             <img className="rest-img" src={this.props.restaurant.imageUrl} />
           </div>

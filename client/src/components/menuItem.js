@@ -10,7 +10,7 @@ const MenuItem = props => {
       </div>
       <div className="item-info">
         <h2>{props.item.name}</h2>
-        <h6>{props.item.price}</h6>
+        <h5>{props.item.price} Pangean Ugh Clubs</h5>
         <p>{props.item.description}</p>
         <button className='add-btn' onClick={props.addToCart}>Add to Cart</button>
       </div>

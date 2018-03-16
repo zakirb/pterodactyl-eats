@@ -56,7 +56,7 @@ class Signup extends Component {
             <br />
             Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
             <br />
-            Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
+            Password: <input type='password' value={this.state.password} onChange={this.handlePasswordChange} />
             <br />
             <input className='form-btn' type='submit' value='Sign Up!' />
           </form>

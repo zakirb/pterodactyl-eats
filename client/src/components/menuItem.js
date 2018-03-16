@@ -2,7 +2,6 @@ import React from 'react';
 import restaurantData from '../restaurantData';
 import '../css/MenuItem.css';
 
-
 const MenuItem = props => {
   return (
     <div id='menu-item-container'>

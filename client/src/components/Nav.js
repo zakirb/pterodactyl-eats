@@ -21,10 +21,10 @@ class Nav extends Component {
     let navButton = document.getElementById('nav-button')
     if (navBar.classList.contains('slide-right')) {
       navBar.classList.remove('slide-right')
-      navButton.classList.remove('slide-right')
+      navButton.classList.remove('slide-right-btn')
     } else {
       navBar.classList.add('slide-right')
-      navButton.classList.add('slide-right')
+      navButton.classList.add('slide-right-btn')
     }
   }
 

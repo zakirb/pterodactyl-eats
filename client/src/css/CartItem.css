@@ -1,0 +1,21 @@
+
+.cart-info {
+  display: inline-block;
+  border: solid black 1px;
+  width: 50%;
+}
+
+.cart-item-container {
+text-align: center;
+  height: 10%;
+  font-size: .6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: solid 1px black;
+}
+
+.cart-img {
+  width: 70%;
+}

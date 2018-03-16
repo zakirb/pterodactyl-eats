@@ -3,11 +3,11 @@ import '../css/CartItem.css';
 
 const CartItem = props => {
   return (
-    <div>
-      <div>
-        <img src={props.item.imageUrl} />
+    <div className='cart-item-container'>
+      <div className='cart-info'>
+        <img className='cart-img' src={props.item.imageUrl} />
       </div>
-      <div>
+      <div className='cart-info'>
         <h2>{props.item.name}</h2>
         <h6>{props.item.price}</h6>
         <p>{props.item.description}</p>

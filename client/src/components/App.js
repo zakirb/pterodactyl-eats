@@ -119,27 +119,23 @@ class App extends Component {
       <Grid fluid>
         <Router>
           <div>
-            <Row>
-              <Col xs={6}>
-                <Nav
-                  user={this.state.user}
-                  logout={this.logout}
-                  completedOrder={this.state.completedOrder}
-                  liftToken={this.liftTokenToState}
-                  liftCurrentPage={this.liftCurrentPageToState}
-                />
-              </Col>
-            </Row>
+            <Nav
+              user={this.state.user}
+              logout={this.logout}
+              completedOrder={this.state.completedOrder}
+              liftToken={this.liftTokenToState}
+              liftCurrentPage={this.liftCurrentPageToState}
+            />
             <Row center='xs'>
               <Col xs={6}>
                 <Search liftCurrentPage={this.liftCurrentPageToState} />
               </Col>
             </Row>
-            <Row end='xs'>
-              <Col xs={6}>
+            {/* <Row end='xs'>
+              <Col xs={6}> */}
                 <Cart user={this.state.user} items={this.state.cartItems} removeFromCart={this.removeFromCart}/>
-              </Col>
-            </Row>
+              {/* </Col>
+            </Row> */}
             <div>
               <Route exact path='/' component={Home} />
               <Route path='/results' component={ () => (

@@ -1,0 +1,36 @@
+/* nav {
+  position: fixed;
+  top: 0;
+  left: -10vw;
+  width: 10vw;
+  transition: transform .5s;
+  background-color: #593010;
+}
+
+nav a {
+  color: #d9fef6;
+  text-decoration: none;
+} */
+
+#cart {
+  position: fixed;
+  top: 0;
+  right: -20vw;
+  max-width: 20vw;
+  transition: transform .5s;
+  background-color: #593010;
+  color: #d9fef6;
+}
+
+#cart-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: .3vw;
+  font-size: 1.2em;
+  transition: transform .5s;
+}
+
+.slide-left {
+  transform: translate(-20vw, 0) !important;
+}

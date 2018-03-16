@@ -2,5 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(15deg, #3fa, #a3f);
+  background: linear-gradient(15deg, rgba(51, 255, 170, 0.3), rgba(141, 51, 255, 0.3)),
+              linear-gradient(30deg, rgba(215, 80, 80, 0.3), rgba(238, 215, 58, 0.3)),
+              linear-gradient(750deg, rgba(52, 97, 235, 0.3), rgba(58, 238, 66, 0.3));
 }

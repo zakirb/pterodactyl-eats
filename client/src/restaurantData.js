@@ -31,7 +31,7 @@ const restaurantData = [
     name: "The Egg Nest",
     imageUrl: 'https://img.etsystatic.com/il/251b4c/871193069/il_570xN.871193069_gv0r.jpg',
     address: "Big Cliff Road",
-    description: 'Perched high atop the Big Cliff, out of reach from most non-avian predators, The Egg Nest is home to plenty of nutritious and unguarded dinosaur eggs, served your way.'
+    description: 'Perched high atop the Big Cliff, out of reach from most non-avian predators, The Egg Nest is home to plenty of nutritious and unguarded dinosaur eggs, served your way.',
     menuItems: [
       {
         name: 'Dino Eggs Benny',
@@ -57,7 +57,7 @@ const restaurantData = [
     name: "Cretaceous Crab House",
     imageUrl: 'https://ae01.alicdn.com/kf/HTB1GkcxQVXXXXcOaXXXq6xXFXXXe/beibehang-Custom-photo-wallpaper-large-mural-wall-stickers-ancient-dinosaur-era-3D-stereo-TV-sofa.jpg_640x640.jpg',
     address: "Salty Sea",
-    description: "The first crab house to ever exist!"
+    description: "The first crab house to ever exist!",
     menuItems: [
       {
         name: 'Horshoe Crab',
@@ -103,13 +103,13 @@ const restaurantData = [
     name: "Wraptor's",
     imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPNGzuuf8DCR-S3PEC-Kray7YMw0KDVJNOSvVaplBQxeR69a60ww',
     address: "Jurassic Parkade",
-    description: "We serve wraps made by Raptors"
+    description: "We serve wraps made by Raptors",
     menuItems: [
       {
         name: 'The Rap',
         imageUrl: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/9/25/0/ZB0307H_grilled-chicken-caesar-wrap_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371611416726.jpeg',
         description: 'That\'s not chicken',
-        price: 146.99,
+        price: 146.99
       }
     ]
   }

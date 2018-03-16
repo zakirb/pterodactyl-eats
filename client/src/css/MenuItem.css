@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.item-info {
+  display: inline-block;
+  width: 50%;
+}
+
+#menu-item-container {
+text-align: center;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4vh auto;
+}
+
+.menu-img {
+  width: 70%;
+}

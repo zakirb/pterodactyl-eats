@@ -6,10 +6,6 @@ class Restaurant extends Component {
   constructor(props){
     super(props)
   }
-
-
-
-
   render() {
 
     const menuItems = this.props.restaurant.menuItems.map( (item, index) => {
@@ -18,11 +14,19 @@ class Restaurant extends Component {
 
     return (
       <div>
-        <h1 class='rest-h1'>{this.props.restaurant.name}</h1>
-        <h6 class='rest-h6'>{this.props.restaurant.address}</h6>
-        <img src={this.props.restaurant.imageUrl} />
-        <p>{this.props.restaurant.description}</p>
+        <div className='rest-item-container'>
+          <div className='rest-info'>
+            <img className="rest-img" src={this.props.restaurant.imageUrl} />
+          </div>
+          <div className='rest-info'>
+            <h2>{this.props.restaurant.name}</h2>
+            <h6>{this.props.restaurant.address}</h6>
+            <p>{this.props.restaurant.description}</p>
+          </div>
+        </div>
+        <div>
         {menuItems}
+        </div>
       </div>
 
     )

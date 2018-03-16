@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.rest-info {
+  display: inline-block;
+  width: 50%;
+}
+
+.rest-item-container {
+text-align: center;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4vh auto;
+}
+
+.rest-img {
+  width: 50%;
+}

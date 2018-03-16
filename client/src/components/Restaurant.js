@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MenuItem from './MenuItem';
+import '../css/restaurant.css';
 
 class Restaurant extends Component {
   constructor(props){
@@ -17,14 +18,11 @@ class Restaurant extends Component {
 
     return (
       <div>
-        <h1>........RESTAURANT.......</h1>
-          <div>
-            <h2>{this.props.restaurant.name}</h2>
-            <h6>{this.props.restaurant.address}</h6>
-            <img src={this.props.restaurant.imageUrl} />
-            <p>{this.props.restaurant.description}</p>
-            {menuItems}
-          </div>
+        <h1 class='rest-h1'>{this.props.restaurant.name}</h1>
+        <h6 class='rest-h6'>{this.props.restaurant.address}</h6>
+        <img src={this.props.restaurant.imageUrl} />
+        <p>{this.props.restaurant.description}</p>
+        {menuItems}
       </div>
 
     )

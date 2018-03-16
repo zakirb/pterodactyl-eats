@@ -16,37 +16,64 @@ class Nav extends Component {
     this.props.liftCurrentPage('/')
   }
 
+  slideNav() {
+    let navBar = document.getElementById('nav-bar')
+    let navButton = document.getElementById('nav-button')
+    if (navBar.classList.contains('slide-right')) {
+      navBar.classList.remove('slide-right')
+      navButton.classList.remove('slide-right')
+    } else {
+      navBar.classList.add('slide-right')
+      navButton.classList.add('slide-right')
+    }
+  }
+
   render() {
     let theUser = this.props.user
     if (typeof theUser === 'object' && Object.keys(theUser).length > 0) {
       if (this.props.completedOrder.length > 0) {
         return (
           // links if logged in
-          <nav>
-            <Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link>
-            <Link to='/tracking' onClick={() => this.props.liftCurrentPage('')}>Tracking</Link>
-            <Link to='/' onClick={() => this.handleClick()}>Logout</Link>
-          </nav>
+          <div>
+            <nav id='nav-bar'>
+              <ul>
+                <li><Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link></li>
+                <li><Link to='/tracking' onClick={() => this.props.liftCurrentPage('')}>Tracking</Link></li>
+                <li><Link to='/' onClick={() => this.handleClick()}>Logout</Link></li>
+              </ul>
+            </nav>
+            <button onClick={() => this.slideNav()} id='nav-button'>|||</button>
+          </div>
         )
       } else {
         return (
           // links if logged in
-          <nav>
-            <Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link>
-            <Link to='/' onClick={() => this.handleClick()}>Logout</Link>
-          </nav>
+          <div>
+            <nav id='nav-bar'>
+              <ul>
+                <li><Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link></li>
+                <li><Link to='/' onClick={() => this.handleClick()}>Logout</Link></li>
+              </ul>
+            </nav>
+            <button onClick={() => this.slideNav()} id='nav-button'>|||</button>
+          </div>
         )
       }
 
     } else {
       return (
         // links if not logged in....
-        <nav>
-          <Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link>
-          <Link to='/restaurant' onClick={() => this.props.liftCurrentPage('/restaurant')}>Restaurant</Link>
-          <Link to='/login'>Log In</Link>
-          <Link to='/signup'>Sign Up</Link>
-        </nav>
+        <div>
+          <nav id='nav-bar'>
+            <ul>
+              <li><Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link></li>
+              <li><Link to='/restaurant' onClick={() => this.props.liftCurrentPage('/restaurant')}>Restaurant</Link></li>
+              <li><Link to='/login'>Log In</Link></li>
+              <li><Link to='/signup'>Sign Up</Link></li>
+            </ul>
+          </nav>
+          <button onClick={() => this.slideNav()} id='nav-button'>|||</button>
+        </div>
       )
     }
   }

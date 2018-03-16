@@ -1,3 +1,24 @@
 nav {
+  position: fixed;
+  top: 0;
+  left: -10vw;
+  width: 10vw;
+  transition: transform .5s;
+  background-color: #593010;
+}
+
+nav a {
+  color: #d9fef6;
   text-decoration: none;
+}
+
+#nav-button {
+  padding: .3vw;
+  font-size: 1.2em;
+  transform: rotate(90deg);
+  transition: transform .5s;
+}
+
+.slide-right {
+  transform: translate(10vw, 0) !important;
 }

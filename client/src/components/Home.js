@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import image from '../images/pterodactyl-img-1.png';
 
 class Home extends Component {
   constructor(props){
@@ -8,7 +9,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>........HOME.......</h1>
+        <h1>Welcome to PteroEats</h1>
+        <h3>Food to your cave, flown by our own pterodactyls</h3>
+        <img src={image} />
       </div>
     )
   }

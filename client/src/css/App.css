@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.page-extender {
+  position: relative;
+  bottom: 0;
+  height: 80vh;
+  width: 100%;
+}

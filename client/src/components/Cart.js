@@ -12,13 +12,23 @@ const Cart = props => {
               return acc + curVal.price
             }, 0)
 
-  return (
-    <div>
-      {allItems}
-      <p>Total: ${total}</p>
-      <Link to='/checkout'><button>Checkout</button></Link>
-    </div>
-  )
+  if ( Object.keys(props.user).length > 0 ) {
+    return (
+      <div>
+        {allItems}
+        <p>Total: ${total}</p>
+        <Link to='/checkout'><button>Checkout</button></Link>
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        {allItems}
+        <p>Total: ${total}</p>
+        <Link to='/login'><button>Checkout</button></Link>
+      </div>
+    )
+  }
 
 }
 

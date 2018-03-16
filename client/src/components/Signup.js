@@ -46,15 +46,20 @@ class Signup extends Component {
       return (<Redirect to={{ pathname: this.props.currentPage }} />)
     } else {
       return (
-        <form onSubmit={this.handleSubmit}>
-          Name: <input type='text' value={this.state.name} onChange={this.handleNameChange} />
-          <br />
-          Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
-          <br />
-          Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
-          <br />
-          <input type='submit' value='Sign Up!' />
-        </form>
+
+        <div>
+          <h3>Sign up</h3>
+
+          <form onSubmit={this.handleSubmit}>
+            Name: <input type='text' value={this.state.name} onChange={this.handleNameChange} />
+            <br />
+            Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
+            <br />
+            Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
+            <br />
+            <input type='submit' value='Sign Up!' />
+          </form>
+        </div>
       )
     }
   }

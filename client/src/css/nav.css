@@ -43,3 +43,8 @@ li {
   transform: translate(10vw, 0) !important;
   box-shadow: .5vw 1vh 1.2vw .1vw rgba(0,0,0,.5);
 }
+
+.slide-right-btn {
+  transform: translate(10vw, 0) rotate(90deg) !important;
+  box-shadow: .5vw 1vh 1.2vw .1vw rgba(0,0,0,.5);
+}

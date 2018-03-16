@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import '../css/forms.css';
 
 class Signup extends Component {
   constructor(props) {
@@ -47,7 +48,7 @@ class Signup extends Component {
     } else {
       return (
 
-        <div>
+        <div className='form-wrap'>
           <h3>Sign up</h3>
 
           <form onSubmit={this.handleSubmit}>
@@ -57,7 +58,7 @@ class Signup extends Component {
             <br />
             Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
             <br />
-            <input type='submit' value='Sign Up!' />
+            <input className='form-btn' type='submit' value='Sign Up!' />
           </form>
         </div>
       )

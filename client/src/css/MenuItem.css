@@ -20,3 +20,13 @@ text-align: center;
 .menu-img {
   width: 70%;
 }
+
+.add-btn {
+  position: relative;
+  background-color: #3699a1;
+  font-size: 1em;
+  padding: .5vw;
+  color: papayawhip;
+  outline: none;
+  cursor: pointer;
+}

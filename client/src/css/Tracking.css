@@ -4,7 +4,15 @@ z-index: 1;
 
 #bird-container {
   position: relative;
+  top: -20vh;
   width:30vh;
+  animation: fly 5s infinite;
+}
+
+@keyframes fly {
+  50% {
+    transform: translate(50vw, -50vh);
+  }
 }
 
 #ptero {

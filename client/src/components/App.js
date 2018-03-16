@@ -33,6 +33,7 @@ class App extends Component {
     this.liftRestaurantToState = this.liftRestaurantToState.bind(this)
     this.addToCart = this.addToCart.bind(this)
     this.removeFromCart = this.removeFromCart.bind(this)
+    this.addCompletedOrder = this.addCompletedOrder.bind(this)
   }
 
   liftTokenToState(data) {
@@ -68,6 +69,15 @@ class App extends Component {
     this.setState({
       cartItems: copyCart
     }, console.log(this.state.cartItems))
+  }
+
+  addCompletedOrder() {
+    console.log(this.state.cartItems);
+    var order = Array.from(this.state.cartItems);
+    this.setState({
+      cartItems: [],
+      completedOrder: order
+    })
   }
 
 
@@ -139,9 +149,14 @@ class App extends Component {
                 <Restaurant restaurant={this.state.currentRestaurant} addToCart={this.addToCart} />
               )} />
               <Route path='/checkout' component={ () => (
-                <Checkout cartItems={this.state.cartItems} removeFromCart={this.removeFromCart}/>
+                <Checkout
+                  cartItems={this.state.cartItems}
+                  removeFromCart={this.removeFromCart}
+                  addCompletedOrder={this.addCompletedOrder}/>
               )} />
-              <Route path='/tracking' component={Tracking} />
+              <Route path='/tracking' component={ () => (
+                <Tracking completedOrder={this.state.completedOrder} />
+              )} />
               <Route path='/login' component={() => (
                 <Login user={this.state.user} currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
               )} />

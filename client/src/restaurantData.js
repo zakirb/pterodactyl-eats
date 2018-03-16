@@ -5,7 +5,7 @@ const restaurantData = [
     name: "Teddy Rex's Butcher Shop",
     imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/91JbyDplsjL._SY355_.jpg',
     address: "Death Valley",
-    description: "The king of Plastic Tyrannosaurus Rex T T dinosaurs is finally here! – surprise your child with a realistic action figure of the legendary tyrannosaurus rex dinosaur by ciftoys! Designed with great attention to detail, our t-rex toy is not only eye-catching but also educational, since it will help spark your child’s curiosity about dinosaurs and the Jurassic era.",
+    description: "One of the most feared carnivores in Pangea has decided to open up a restaurant, but he can’t cook with those short arms! Everything served fresh off the bone.",
     menuItems: [
       {
         name: 'Short-Arm Short Ribs',

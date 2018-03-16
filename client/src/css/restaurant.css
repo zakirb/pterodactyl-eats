@@ -1,18 +1,20 @@
-.rest-wrqp {
-  /* position: relative; */
-  height: 80%;
-  width: 100%;
+.rest-wrap {
+  position: relative;
+  top: 0;
+  /* height: 80%;
+  width: 100%; */
 }
 
 .rest-item {
   position: relative;
 }
 
-.rest-item-backing {
+.restaurant-backing {
   position: absolute;
   top: 0;
+  left: 5vw;
   height: 100%;
-  width: 95vw;
+  width: 90vw;
   background-color: #192628;
   opacity: .3;
   z-index: -10;

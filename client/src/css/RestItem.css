@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.rest-info {
+  display: inline-block;
+  width: 50%;
+}
+
+.rest-item-container {
+text-align: center;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4vh auto;
+  border: solid 1px black;
+}
+
+.rest-img {
+  width: 50%;
+}

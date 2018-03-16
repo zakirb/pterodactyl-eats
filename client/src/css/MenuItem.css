@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.item-info {
+  display: inline-block;
+  border: solid black 1px;
+  width: 50%;
+}
+
+#menu-item-container {
+text-align: center;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4vh auto;
+  border: solid 1px black;
+}
+
+.menu-img {
+  width: 70%;
+}

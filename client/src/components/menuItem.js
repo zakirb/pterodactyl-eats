@@ -5,11 +5,11 @@ import '../css/MenuItem.css';
 
 const MenuItem = props => {
   return (
-    <div>
-      <div>
-        <img src={props.item.imageUrl} />
+    <div id='menu-item-container'>
+      <div className="item-info">
+        <img className='menu-img' src={props.item.imageUrl} />
       </div>
-      <div>
+      <div className="item-info">
         <h2>{props.item.name}</h2>
         <h6>{props.item.price}</h6>
         <p>{props.item.description}</p>

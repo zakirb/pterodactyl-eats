@@ -15,7 +15,7 @@ const Cart = props => {
   return (
     <div>
       {allItems}
-      <p>Total: {total}</p>
+      <p>Total: ${total}</p>
       <Link to='/checkout'><button>Checkout</button></Link>
     </div>
   )

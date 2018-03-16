@@ -53,7 +53,14 @@ nav a {
   color: papayawhip;
   outline: none;
   cursor: pointer;
+  transition: all .5s;
 }
+
+#cart-checkout:hover {
+  transform: scale(1.15);
+  color: orange;
+}
+
 
 .cart-item-remove {
   position: relative;
@@ -61,4 +68,10 @@ nav a {
   color: papayawhip;
   outline: none;
   cursor: pointer;
+  transition: all .5s;
+}
+
+.cart-item-remove:hover {
+  transform: scale(1.15);
+  color: orange;
 }

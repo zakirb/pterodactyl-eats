@@ -29,4 +29,10 @@ text-align: center;
   color: papayawhip;
   outline: none;
   cursor: pointer;
+  transition: all .5s;
+}
+
+.add-btn:hover {
+  transform: scale(1.15);
+  color: orange;
 }

@@ -116,58 +116,56 @@ class App extends Component {
 
   render() {
     return (
-      <Grid fluid>
-        <Router>
-          <div>
-            <Nav
-              user={this.state.user}
-              logout={this.logout}
-              completedOrder={this.state.completedOrder}
-              liftToken={this.liftTokenToState}
-              liftCurrentPage={this.liftCurrentPageToState}
-            />
-            <Row center='xs'>
-              <Col xs={6}>
-                <Search liftCurrentPage={this.liftCurrentPageToState} />
-              </Col>
-            </Row>
-            {/* <Row end='xs'>
-              <Col xs={6}> */}
-                <Cart user={this.state.user} items={this.state.cartItems} removeFromCart={this.removeFromCart}/>
-              {/* </Col>
-            </Row> */}
+      <div>
+        <Grid fluid>
+          <Router>
             <div>
-              <Route exact path='/' component={Home} />
-              <Route path='/results' component={ () => (
-                <Results liftRestaurantToState={this.liftRestaurantToState} />
-              )} />
-              <Route path='/restaurant' component={ () => (
-                <Restaurant restaurant={this.state.currentRestaurant} addToCart={this.addToCart} />
-              )} />
-              <Route path='/checkout' component={ () => (
-                <Checkout
-                  cartItems={this.state.cartItems}
-                  removeFromCart={this.removeFromCart}
-                  addCompletedOrder={this.addCompletedOrder}/>
-              )} />
-              <Route path='/tracking' component={ () => (
-                <Tracking completedOrder={this.state.completedOrder} />
-              )} />
-              <Route path='/login' component={() => (
-                <Login user={this.state.user} currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
-              )} />
-              <Route path='/signup' component={() => (
-                <Signup user={this.state.user} currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
-              )} />
+              <Nav
+                user={this.state.user}
+                logout={this.logout}
+                completedOrder={this.state.completedOrder}
+                liftToken={this.liftTokenToState}
+                liftCurrentPage={this.liftCurrentPageToState}
+              />
+              <Row center='xs'>
+                <Col xs={6}>
+                  <Search liftCurrentPage={this.liftCurrentPageToState} />
+                </Col>
+              </Row>
+              {/* <Row end='xs'>
+                <Col xs={6}> */}
+                  <Cart user={this.state.user} items={this.state.cartItems} removeFromCart={this.removeFromCart}/>
+                {/* </Col>
+              </Row> */}
+              <div>
+                <Route exact path='/' component={Home} />
+                <Route path='/results' component={ () => (
+                  <Results liftRestaurantToState={this.liftRestaurantToState} />
+                )} />
+                <Route path='/restaurant' component={ () => (
+                  <Restaurant restaurant={this.state.currentRestaurant} addToCart={this.addToCart} />
+                )} />
+                <Route path='/checkout' component={ () => (
+                  <Checkout
+                    cartItems={this.state.cartItems}
+                    removeFromCart={this.removeFromCart}
+                    addCompletedOrder={this.addCompletedOrder}/>
+                )} />
+                <Route path='/tracking' component={ () => (
+                  <Tracking completedOrder={this.state.completedOrder} />
+                )} />
+                <Route path='/login' component={() => (
+                  <Login user={this.state.user} currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
+                )} />
+                <Route path='/signup' component={() => (
+                  <Signup user={this.state.user} currentPage={this.state.currentPage} liftToken={this.liftTokenToState} />
+                )} />
+              </div>
             </div>
-          </div>
-        </Router>
-          <Row center='xs'>
-            <Col xs={12}>
-              <Footer />
-            </Col>
-          </Row>
-      </Grid>
+          </Router>
+        </Grid>
+      <Footer />
+    </div>
     )
   }
 }

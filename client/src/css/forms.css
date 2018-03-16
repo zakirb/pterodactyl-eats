@@ -12,4 +12,10 @@
   color: papayawhip;
   outline: none;
   cursor: pointer;
+  transition: all .5s;
+}
+
+.form-btn:hover {
+  transform: scale(1.15);
+  color: orange;
 }

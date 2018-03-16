@@ -12,6 +12,11 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+  color: peru;
+  border-bottom: 2px solid peru;
+}
+
 li {
   position: relative;
   left: -1vw;

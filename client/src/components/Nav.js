@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../css/nav.css';
 import Home from './Home';
 import Results from './Results';
 import Restaurant from './Restaurant';
@@ -18,16 +19,25 @@ class Nav extends Component {
   render() {
     let theUser = this.props.user
     if (typeof theUser === 'object' && Object.keys(theUser).length > 0) {
-      return (
-        // links if logged in
-        <nav>
-          <Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link>
-          <Link to='/restaurant' onClick={() => this.props.liftCurrentPage('/restaurant')}>Restaurant</Link>
-          <Link to='/checkout' onClick={() => this.props.liftCurrentPage('')}>Checkout</Link>
-          <Link to='/tracking' onClick={() => this.props.liftCurrentPage('')}>Tracking</Link>
-          <Link to='/' onClick={() => this.handleClick()}>Logout</Link>
-        </nav>
-      )
+      if (this.props.completedOrder.length > 0) {
+        return (
+          // links if logged in
+          <nav>
+            <Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link>
+            <Link to='/tracking' onClick={() => this.props.liftCurrentPage('')}>Tracking</Link>
+            <Link to='/' onClick={() => this.handleClick()}>Logout</Link>
+          </nav>
+        )
+      } else {
+        return (
+          // links if logged in
+          <nav>
+            <Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link>
+            <Link to='/' onClick={() => this.handleClick()}>Logout</Link>
+          </nav>
+        )
+      }
+
     } else {
       return (
         // links if not logged in....

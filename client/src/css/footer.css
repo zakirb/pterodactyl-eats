@@ -1,0 +1,10 @@
+footer {
+  position: relative;
+  bottom: 0;
+  height: 15vw;
+  width: 100vw;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  background-color: #294345;
+  color: #e0edfb ;
+}

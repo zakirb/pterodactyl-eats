@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import '../App.css';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import '../css/App.css';
 import { UserProfile } from './UserProfile';
 import axios from 'axios'
 import Nav from './Nav';
@@ -105,18 +106,30 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>~~~~~~~State.currentPage: {this.state.currentPage}~~~~~~~~~~~~</h1>
+      <Grid fluid>
         <Router>
           <div>
-            <Nav
-              user={this.state.user}
-              logout={this.logout}
-              liftToken={this.liftTokenToState}
-              liftCurrentPage={this.liftCurrentPageToState}
-            />
-            <Search liftCurrentPage={this.liftCurrentPageToState} />
-            <Cart items={this.state.cartItems} removeFromCart={this.removeFromCart}/>
+            <Row>
+              <Col xs={6}>
+                <Nav
+                  user={this.state.user}
+                  logout={this.logout}
+                  completedOrder={this.state.completedOrder}
+                  liftToken={this.liftTokenToState}
+                  liftCurrentPage={this.liftCurrentPageToState}
+                />
+              </Col>
+            </Row>
+            <Row center='xs'>
+              <Col xs={6}>
+                <Search liftCurrentPage={this.liftCurrentPageToState} />
+              </Col>
+            </Row>
+            <Row end='xs'>
+              <Col xs={6}>
+                <Cart user={this.state.user} items={this.state.cartItems} removeFromCart={this.removeFromCart}/>
+              </Col>
+            </Row>
             <div>
               <Route exact path='/' component={Home} />
               <Route path='/results' component={ () => (
@@ -138,8 +151,12 @@ class App extends Component {
             </div>
           </div>
         </Router>
-        <Footer />
-      </div>
+          <Row center='xs'>
+            <Col xs={12}>
+              <Footer />
+            </Col>
+          </Row>
+      </Grid>
     )
   }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import '../css/forms.css';
 
 class Login extends Component {
   constructor(props) {
@@ -40,15 +41,15 @@ class Login extends Component {
     } else {
       return(
 
-        <div>
+        <div className='form-wrap'>
           <h3>Please Log In</h3>
 
           <form onSubmit={this.handleSubmit}>
             Email: <input type='text' value={this.state.email} onChange={this.handleEmailChange} />
             <br />
-            Password: <input type='text' value={this.state.password} onChange={this.handlePasswordChange} />
+            Password: <input type='password' value={this.state.password} onChange={this.handlePasswordChange} />
             <br />
-            <input type='submit' value='Log In!' />
+            <input className='form-btn' type='submit' value='Log In!' />
           </form>
         </div>
       )

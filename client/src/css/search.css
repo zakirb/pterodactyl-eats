@@ -1,0 +1,23 @@
+.search-wrap {
+  margin: 2vw;
+}
+
+.search-input {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 2em;
+  outline: none;
+  margin-bottom: 1vw;
+}
+
+#search-button {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #3699a1;
+  font-size: 2em;
+  color: papayawhip;
+  outline: none;
+  cursor: pointer;
+}

@@ -15,7 +15,7 @@ const RestItem = props => {
           <h6>{props.restaurant.address}</h6>
           <p>{props.restaurant.description}</p>
         </div>
-        <div class='rest-item-backing'></div>
+        <div className='rest-item-backing'></div>
       </div>
     </Link>
   )

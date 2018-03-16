@@ -16,12 +16,12 @@ const Checkout = props => {
     return (
       <div>
         <div>
-        <h1>........CHECKOUT.......</h1>
-        <h2>Your Order</h2>
-        <ul>
+        <h1>Checkout</h1>
+        <h2 className='checkout-summary'>Your Order</h2>
+        <ul className='checkout-summary'>
           {cartItems}
         </ul>
-        <p>Total: ${total}</p>
+        <p className='checkout-summary'>Total: ${total}</p>
       </div>
       <div class="creditCardForm">
         <div class="heading">
@@ -30,19 +30,19 @@ const Checkout = props => {
         <div class="payment">
           <form>
             <div class="form-group owner">
-              <label for="owner">Owner</label>
+              <label className='cc-labels' for="owner">Owner</label>
               <input type="text" class="form-control" id="owner"/>
             </div>
             <div class="form-group CVV">
-              <label for="cvv">CVV</label>
+              <label className='cc-labels' for="cvv">CVV</label>
               <input type="text" class="form-control" id="cvv"/>
             </div>
             <div class="form-group" id="card-number-field">
-              <label for="cardNumber">Card Number</label>
+              <label className='cc-labels' for="cardNumber">Card Number</label>
               <input type="text" class="form-control" id="cardNumber"/>
             </div>
               <div class="form-group" id="expiration-date">
-                <label>Expiration Date</label>
+                <label className='cc-labels'>Expiration Date</label>
                 <select>
                   <option value="01">January</option>
                   <option value="02">February </option>

@@ -7,4 +7,5 @@ footer {
   padding-bottom: 7vh;
   background-color: #294345;
   color: papayawhip;
+  z-index: -5;
 }

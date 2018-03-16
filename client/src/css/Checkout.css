@@ -1,3 +1,12 @@
+.checkout-summary {
+  position: relative;
+  left: 45vw;
+}
+
+.cc-labels {
+  color: #294345;
+}
+
 .creditCardForm {
     max-width: 700px;
     background-color: #fff;

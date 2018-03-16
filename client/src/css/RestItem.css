@@ -9,7 +9,7 @@ a {
 }
 
 .rest-item-container {
-text-align: center;
+  text-align: center;
   width: 70%;
   display: flex;
   justify-content: center;

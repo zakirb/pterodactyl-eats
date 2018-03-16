@@ -1,0 +1,15 @@
+.form-wrap {
+  position: relative;
+  font-size: 1.5em;
+  outline: none;
+}
+
+.form-btn {
+  position: relative;
+  background-color: #3699a1;
+  font-size: 1em;
+  padding: .5vw;
+  color: papayawhip;
+  outline: none;
+  cursor: pointer;
+}

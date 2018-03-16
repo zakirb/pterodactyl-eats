@@ -67,7 +67,6 @@ class Nav extends Component {
           <nav id='nav-bar'>
             <ul>
               <li><Link to='/' onClick={() => this.props.liftCurrentPage('/')}>Home</Link></li>
-              <li><Link to='/restaurant' onClick={() => this.props.liftCurrentPage('/restaurant')}>Restaurant</Link></li>
               <li><Link to='/login'>Log In</Link></li>
               <li><Link to='/signup'>Sign Up</Link></li>
             </ul>

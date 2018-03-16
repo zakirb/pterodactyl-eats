@@ -1,0 +1,21 @@
+#map-container {
+z-index: 1;
+}
+
+#bird-container {
+  position: relative;
+  width:30vh;
+}
+
+#ptero {
+  width:100%;
+  z-index: 5;
+  position: absolute;
+}
+
+#chicken {
+  width: 40%;
+  z-index:10;
+  position: absolute;
+  transform: translate(25%,55%);
+}

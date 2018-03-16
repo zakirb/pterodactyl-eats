@@ -1,7 +1,6 @@
 
 .cart-info {
   display: inline-block;
-  border: solid black 1px;
   width: 50%;
 }
 
@@ -13,7 +12,6 @@ text-align: center;
   justify-content: center;
   align-items: center;
   margin: 0;
-  border: solid 1px black;
 }
 
 .cart-img {
